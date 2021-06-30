@@ -27,6 +27,7 @@ footer {
   width: 300px;
   margin-right: 30px;
   position: relative;
+  padding: 10px;
 }
 
 .box:nth-child(3) {
@@ -36,7 +37,10 @@ footer {
 span {
   color: white;
   background-color: #ff9a4b;
+  padding: 3px;
   position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .img {
@@ -57,11 +61,31 @@ span {
   background-image: url(chapter9_exercise/img/flow03.png);
 }
 
-.in-box {
-  margin: 10px;
-}
-
-.in-box h3 {
+h3 {
   padding-top: 15px;
   padding-bottom: 5px;
+}
+
+/* レスポンシブ対応 768px 以下 */
+
+@media screen and (max-width: 768px) {
+  .main-contents {
+    display: block;
+    width: 100%;
+  }
+
+  .box {
+    margin: 0 auto;
+    width: 90%;
+    margin-bottom: 20px;
+  }
+
+  .img {
+    height: 150px;
+  }
+
+  .box:nth-child(3) {
+    margin-right: auto;
+    margin-bottom: 0;
+  }
 }
